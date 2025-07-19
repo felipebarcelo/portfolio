@@ -26,9 +26,23 @@
 
   <!-- Sobre mí -->
   <section id="sobre-mi" class="section">
-    <div class="container">
-      <h2>Sobre mí</h2>
-      <p>Soy un entusiasta del mundo Linux, la administración de sistemas y la ciberseguridad. Me interesa la automatización, la nube y el aprendizaje continuo.</p>
+    <div class="container sobre-mi-container">
+      <div class="sobre-mi-texto">
+        <h2>Sobre mí</h2>
+        <p>¡Hola soy Felipe Barceló, un entusiasta de la tecnología, actualmente me estoy formando en desarrollo web, aprendiendo tecnologías como
+          HTML, CSS y JavasScript.
+        </p>
+        <p>Además, tengo un interes muy marcado en las Ciberseguridad y en los servicios en la nube (especialmente aws), áreas en las que busco especialisarme
+          para desarrollar soluciones seguras, escalables y de alto rendimiento
+        </p>
+
+        <h3>Cursos y certificados</h3>
+        <ul class="cursos-lista">
+          <li>Desarrollo web (html, css, js) - Jovenes a Programar </li>
+          <li>Tu futuro / AWS ReStart - Fundación Forge / CodingDojo</li>
+          <li>Tester de software - Centro de Ensayos de Software</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -40,13 +54,13 @@
 
       <div class="card">
         <h3>Frontendstore</h3>
-        <p>Página web creada con html y para encontrar recomendaciones de peliculas</p>
+        <p>ECommerce creada con html y css </p>
         <a href="https://frontendstorefbarcelo.netlify.app/" target="_blank" class="btn-proyecto">Ver proyecto</a>
       </div>
 
       <div class="card">
-        <h3>Monitor de sistema</h3>
-        <p>Script en Bash para monitorear recursos como RAM, CPU y disco.</p>
+        <h3>TuPeli</h3>
+        <p>Página donde encontrar recomendaciones de peliculas creado con html y css</p>
         <a href="https://github.com/tuusuario/monitor-sistema" target="_blank" class="btn-proyecto">Ver proyecto</a>
       </div>
 
@@ -71,29 +85,43 @@
         <span>HTML5</span>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3" />
+        <img src="/iconos/css3.svg" alt="CSS3" />
         <span>CSS3</span>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript" />
+        <img src="/iconos/javascript-155-svgrepo-com.svg" alt="JavaScript" />
         <span>JavaScript</span>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" alt="Linux" />
+        <img src="/iconos/linux-svgrepo-com.svg" alt="Linux" />
         <span>Linux</span>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" alt="AWS" />
+        <img src="/iconos/aws.svg" alt="AWS" />
         <span>AWS</span>
       </div>
+      <div class="skill">
+        <img src="/iconos/php.svg" alt="PHP" />
+        <span>PHP</span>
+      </div>
+      <div class="skill">
+        <img src="/iconos/mysql-svgrepo-com.svg" alt="mysql" />
+        <span>mysql</span>
     </div>
   </div>
 </section>
   <!-- Contacto -->
+
   <section id="contacto" class="section">
     <div class="container">
       <h2>Contacto</h2>
-      <p>Puedes escribirme a <a href="mailto:felipe@email.com">felipe@email.com</a> o contactarme en redes.</p>
+      <form name="contacto" method="POST" data-netlify="true" class="formulario-contacto">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu email" required />
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+        <input type="hidden" name="form-name" value="contacto" />
+      </form>
     </div>
   </section>
 
