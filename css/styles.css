@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #fff; 
+  color: #222;
   line-height: 1.6;
 }
 
@@ -95,44 +95,85 @@ h1, h2 {
 }
 
 /* Skills */
-.skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80px;
+#skill{
+  padding: 60px 20px;
+  background-color: #1f1f1f;
+  color: #fff;
   text-align: center;
 }
 
-.skill img {
-  width: 40px;
-  height: 40px;
-  filter: grayscale(1);
-  transition: transform 0.2s, filter 0.2s;
+.skill-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+
 }
 
-.skill img:hover {
+.skill{
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s, ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skill img{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill p{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222
+}
+.habilidades {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.habilidades h2 {
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.iconos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.icono img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icono img:hover {
   transform: scale(1.1);
-  filter: grayscale(0);
 }
 
-.skill span {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.skills li {
-  background-color: #007acc;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+.icono p {
+  color: #333;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -191,4 +232,90 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.sonbre-mi-container p {
+  margin-bottom: 1.2rem;
+}
+
+/* Estilos por defecto (modo claro) */
+body{
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* botón de modo oscuro */
+#toggle-darkmode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid #666;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #eee;
+  color: #111;
+  transition: all 0.3s;
+}
+
+body.dark-mode #toggle-darkmode {
+  background-color: #333;
+  color: #fff;
+  border-color: #ccc;
+}
+
+/* ajustes opcionales para secciones */
+body.dark-mode .habilidades {
+  background-color: #121212;
+}
+
+body.dark-mode header {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .icono p {
+  background-color: #111;
+}
+
+.dark-mode{
+  background-color: #121212;
+  color: #fff;
+}
+
+/* tarjetas de proyectos */
+.project-card {
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* tarjetas de proyectos en modo oscuro */
+.dark-mode .project-card {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+/* Estilo en modo oscuro */
+.dark-mode .icono p{
+  color: white;
+}
+
+#skills{
+  background-color: white;
+}
+
+.dark-mode .habilidades h2{
+  color: white;
 }

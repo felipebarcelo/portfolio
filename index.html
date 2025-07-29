@@ -14,7 +14,7 @@
       <img src="/img/yo.jpg" alt="Foto de Felipe Barceló" class="foto-perfil-header" />
       <div class="texto-header">
         <h1>Felipe Barceló</h1>
-        <p>SysOps | Cloud & Ciberseguridad</p>
+        <p>Desarrollo web | Cloud & Ciberseguridad | Testing de software</p>
         <nav>
           <a href="#proyectos">Proyectos</a>
           <a href="#skills">Skills</a>
@@ -22,22 +22,23 @@
         </nav>
       </div>
     </div>
+    <button id="toggle-darkmode">Modo Oscuro</button>
   </header>
 
   <!-- Sobre mí -->
   <section id="sobre-mi" class="section">
     <div class="container sobre-mi-container">
       <div class="sobre-mi-texto">
-        <h2>Sobre mí</h2>
-        <p>¡Hola soy Felipe Barceló, un entusiasta de la tecnología, actualmente me estoy formando en desarrollo web, aprendiendo tecnologías como
+        <h2 style="margin-bottom: 1.5rem;">Sobre mí</h2>
+        <p style="margin-bottom: 1.2rem;">¡Hola soy Felipe Barceló, un entusiasta de la tecnología, actualmente me estoy formando en desarrollo web, aprendiendo tecnologías como
           HTML, CSS y JavasScript.
         </p>
-        <p>Además, tengo un interes muy marcado en las Ciberseguridad y en los servicios en la nube (especialmente aws), áreas en las que busco especialisarme
+        <p style="margin-bottom: 2rem;">Además, tengo un interes muy marcado en las Ciberseguridad y en los servicios en la nube (especialmente aws), áreas en las que busco especialisarme
           para desarrollar soluciones seguras, escalables y de alto rendimiento
         </p>
 
-        <h3>Cursos y certificados</h3>
-        <ul class="cursos-lista">
+        <h3 style="margin-bottom: 1rem;">Cursos y certificados</h3>
+        <ul class="cursos-lista" style="margin-bottom: 2rem;">
           <li>Desarrollo web (html, css, js) - Jovenes a Programar </li>
           <li>Tu futuro / AWS ReStart - Fundación Forge / CodingDojo</li>
           <li>Tester de software - Centro de Ensayos de Software</li>
@@ -52,22 +53,22 @@
     <h2>Proyectos</h2>
     <div class="grid">
 
-      <div class="card">
+      <div class="project-card">
         <h3>Frontendstore</h3>
         <p>ECommerce creada con html y css </p>
         <a href="https://frontendstorefbarcelo.netlify.app/" target="_blank" class="btn-proyecto">Ver proyecto</a>
       </div>
 
-      <div class="card">
-        <h3>TuPeli</h3>
-        <p>Página donde encontrar recomendaciones de peliculas creado con html y css</p>
-        <a href="https://github.com/tuusuario/monitor-sistema" target="_blank" class="btn-proyecto">Ver proyecto</a>
+      <div class="project-card">
+        <h3>PreguntasCloudPractitioner</h3>
+        <p>Mini aplicación realizada con python con preguntas para la certificación cloud practitioner de aws</p>
+        <a href="https://github.com/Medicenfelo23/PreguntasCloudPractitioner" target="_blank" class="btn-proyecto">Ver proyecto</a>
       </div>
 
-      <div class="card">
+      <div class="project-card">
         <h3>Monitor de sistema</h3>
         <p>Script en Bash para monitorear recursos como RAM, CPU y disco.</p>
-        <a href="https://github.com/tuusuario/monitor-sistema" target="_blank" class="btn-proyecto">Ver proyecto</a>
+        <a href="https://github.com/felipebarcelo/monitorsistema" target="_blank" class="btn-proyecto">Ver proyecto</a>
       </div>
 
     </div> <!-- Cierre correcto de .grid -->
@@ -76,40 +77,47 @@
 
 
   <!-- Skills -->
-  <section id="skills" class="section">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills-icons">
-      <div class="skill">
-        <img src="/iconos/html5.svg" alt="HTML5" />
-        <span>HTML5</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/css3.svg" alt="CSS3" />
-        <span>CSS3</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/javascript-155-svgrepo-com.svg" alt="JavaScript" />
-        <span>JavaScript</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/linux-svgrepo-com.svg" alt="Linux" />
-        <span>Linux</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/aws.svg" alt="AWS" />
-        <span>AWS</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/php.svg" alt="PHP" />
-        <span>PHP</span>
-      </div>
-      <div class="skill">
-        <img src="/iconos/mysql-svgrepo-com.svg" alt="mysql" />
-        <span>mysql</span>
+
+  <section class="habilidades">
+  <h2>Habilidades</h2>
+  <div class="iconos">
+    <div class="icono">
+      <img src="iconos/aws.svg" alt="AWS">
+      <p>AWS</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/html.svg" alt="HTML">
+      <p>HTML</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/css.svg" alt="CSS">
+      <p>CSS</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/js.svg" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/php.svg" alt="PHP">
+      <p>PHP</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/mysql.svg" alt="MySQL">
+      <p>MySQL</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/github.svg" alt="GitHub">
+      <p>GitHub</p>
+    </div>
+    <div class="icono">
+      <img src="iconos/linux.svg" alt="Linux">
+      <p>Linux</p>
     </div>
   </div>
 </section>
+
+
+  
   <!-- Contacto -->
 
   <section id="contacto" class="section">
@@ -131,6 +139,6 @@
       <p>&copy; 2025 Felipe Barceló</p>
     </div>
   </footer>
-
+  <script src="/Script/script.js"></script>
 </body>
 </html>
