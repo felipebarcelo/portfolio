@@ -252,26 +252,174 @@ body.dark-mode {
 }
 
 /* botón de modo oscuro */
+/* Botón modo oscuro mejorado */
 #toggle-darkmode {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: 2px solid #666;
-  padding: 10px 15px;
-  border-radius: 8px;
+  background: #fff;
+  color: #007acc;
+  border: 2px solid #007acc;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   cursor: pointer;
-  font-size: 16px;
-  background-color: #eee;
-  color: #111;
-  transition: all 0.3s;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+#toggle-darkmode:hover {
+  background: #007acc;
+  color: #fff;
+  border-color: #005f99;
 }
 
 body.dark-mode #toggle-darkmode {
+  background: #222;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark-mode #toggle-darkmode:hover {
+  background: #fff;
+  color: #222;
+  border-color: #007acc;
+}
+
+
+/* Header flex para incluir el botón a la derecha */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .header-flex {
+    flex: 1;
+  }
+  #toggle-darkmode {
+    margin-top: 1.5rem;
+    margin-right: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 599px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #toggle-darkmode {
+    margin: 1.2rem auto 0 auto;
+    display: block;
+    align-self: center;
+  }
+}
+
+/* ajustes opcionales para secciones */
+body.dark-mode .habilidades {
+  background-color: #121212;
+}
+
+body.dark-mode header {
   background-color: #333;
   color: #fff;
-  border-color: #ccc;
 }
+
+body.dark-mode .icono p {
+  background-color: #111;
+}
+
+.dark-mode{
+  background-color: #121212;
+  color: #fff;
+}
+
+/* tarjetas de proyectos */
+.project-card {
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* tarjetas de proyectos en modo oscuro */
+.dark-mode .project-card {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+/* Estilo en modo oscuro */
+.dark-mode .icono p{
+  color: white;
+}
+
+#skills{
+  background-color: white;
+}
+
+ .dark-mode .habilidades h2{
+  color: white;
+}
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.1);
+}
+
+.formulario-contacato button {
+  padding: 1rem 1.5rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #005f99;
+}
+
+/* Sobre mí */
+.sonbre-mi-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sonbre-mi-container p {
+  margin-bottom: 1.2rem;
+}
+
+/* Estilos por defecto (modo claro) */
+body{
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* botón de modo oscuro */
 
 /* ajustes opcionales para secciones */
 body.dark-mode .habilidades {
