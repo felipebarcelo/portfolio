@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>¡Gracias!</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container" style="text-align:center; margin-top:4rem;">
+    <h1>¡Gracias por tu mensaje!</h1>
+    <p>Tu mensaje ha sido enviado correctamente. Te responderé pronto.</p>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+  <form name="contacto" method="POST" data-netlify="true" class="formulario-contacto" action="/thanks.html">
+    <input type="text" name="nombre" placeholder="Tu nombre" required />
+    <input type="email" name="email" placeholder="Tu email" required />
+    <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+    <input type="hidden" name="form-name" value="contacto" />
+  </form>
+</body>
+</html>
